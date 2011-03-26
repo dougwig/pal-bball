@@ -1,167 +1,64 @@
-<p>
-  <b>Team:</b>
-  <%=h @signup.team_sex %>
-</p>
+<h2>Team</h2>
+<%=h @signup.team_sex %>
 
-<p>
-  <b>Coach name:</b>
-  <%=h @signup.coach_name %>
-</p>
+<h2>Coach</h2>
+<table>
+	<tr>
+		<td>Name</td>
+		<td><%=h @signup.coach_name %></td>
+	</tr>
+	<tr>
+	  	<td>Phone</td>
+	  	<td><%=h @signup.coach_phone %></td>
+	</tr>
+	<tr>
+	  	<td>Email</td>
+	  	<td><%=h @signup.coach_email %></td>
+	</tr>
+	<tr>
+	  	<td>Address</td>
+	  	<td><%=h @signup.coach_address %></td>
+	</tr>
+</table>
 
-<p>
-  <b>Coach phone:</b>
-  <%=h @signup.coach_phone %>
-</p>
-
-<p>
-  <b>Coach address:</b>
-  <%=h @signup.coach_address %>
-</p>
-
-<p>
-  <b>Coach email:</b>
-  <%=h @signup.coach_email %>
-</p>
-
-<p>
-  <b>Player1 name:</b>
-  <%=h @signup.player1_name %>
-</p>
-
-<p>
-  <b>Player1 address:</b>
-  <%=h @signup.player1_address %>
-</p>
-
-<p>
-  <b>Player1 phone:</b>
-  <%=h @signup.player1_phone %>
-</p>
-
-<p>
-  <b>Player1 email:</b>
-  <%=h @signup.player1_email %>
-</p>
-
-<p>
-  <b>Player1 dob month:</b>
-  <%=h @signup.player1_dob_month %>
-</p>
-
-<p>
-  <b>Player1 dob day:</b>
-  <%=h @signup.player1_dob_day %>
-</p>
-
-<p>
-  <b>Player1 dob year:</b>
-  <%=h @signup.player1_dob_year %>
-</p>
-
-<p>
-  <b>Player2 name:</b>
-  <%=h @signup.player2_name %>
-</p>
-
-<p>
-  <b>Player2 address:</b>
-  <%=h @signup.player2_address %>
-</p>
-
-<p>
-  <b>Player2 phone:</b>
-  <%=h @signup.player2_phone %>
-</p>
-
-<p>
-  <b>Player2 email:</b>
-  <%=h @signup.player2_email %>
-</p>
-
-<p>
-  <b>Player2 dob month:</b>
-  <%=h @signup.player2_dob_month %>
-</p>
-
-<p>
-  <b>Player2 dob day:</b>
-  <%=h @signup.player2_dob_day %>
-</p>
-
-<p>
-  <b>Player2 dob year:</b>
-  <%=h @signup.player2_dob_year %>
-</p>
-
-<p>
-  <b>Player3 name:</b>
-  <%=h @signup.player3_name %>
-</p>
-
-<p>
-  <b>Player3 address:</b>
-  <%=h @signup.player3_address %>
-</p>
-
-<p>
-  <b>Player3 phone:</b>
-  <%=h @signup.player3_phone %>
-</p>
-
-<p>
-  <b>Player3 email:</b>
-  <%=h @signup.player3_email %>
-</p>
-
-<p>
-  <b>Player3 dob month:</b>
-  <%=h @signup.player3_dob_month %>
-</p>
-
-<p>
-  <b>Player3 dob day:</b>
-  <%=h @signup.player3_dob_day %>
-</p>
-
-<p>
-  <b>Player3 dob year:</b>
-  <%=h @signup.player3_dob_year %>
-</p>
-
-<p>
-  <b>Player4 name:</b>
-  <%=h @signup.player4_name %>
-</p>
-
-<p>
-  <b>Player4 address:</b>
-  <%=h @signup.player4_address %>
-</p>
-
-<p>
-  <b>Player4 phone:</b>
-  <%=h @signup.player4_phone %>
-</p>
-
-<p>
-  <b>Player4 email:</b>
-  <%=h @signup.player4_email %>
-</p>
-
-<p>
-  <b>Player4 dob month:</b>
-  <%=h @signup.player4_dob_month %>
-</p>
-
-<p>
-  <b>Player4 dob day:</b>
-  <%=h @signup.player4_dob_day %>
-</p>
-
-<p>
-  <b>Player4 dob year:</b>
-  <%=h @signup.player4_dob_year %>
-</p>
+<h2>Players</h2>
+<table>
+	<tr>
+		<th>Name</th>
+		<th>Birthday</th>
+		<th>Phone</th>
+		<th>Email</th>
+		<th>Address</th>
+	</tr>
+	<tr>
+  		<td><%=h @signup.player1_name %></td>
+	  	<td><%=h "#{@signup.player1_dob_month}/#{@signup.player1_dob_day}/#{@signup.player1_dob_year}" %></td>
+	  	<td><%=h @signup.player1_address %></td>
+	  	<td><%=h @signup.player1_phone %></td>
+	  	<td><%=h @signup.player1_email %></td>
+	</tr>
+	<tr>
+  		<td><%=h @signup.player2_name %></td>
+	  	<td><%=h "#{@signup.player2_dob_month}/#{@signup.player2_dob_day}/#{@signup.player2_dob_year}" %></td>
+	  	<td><%=h @signup.player2_address %></td>
+	  	<td><%=h @signup.player2_phone %></td>
+	  	<td><%=h @signup.player2_email %></td>
+	</tr>
+	<tr>
+  		<td><%=h @signup.player3_name %></td>
+	  	<td><%=h "#{@signup.player3_dob_month}/#{@signup.player3_dob_day}/#{@signup.player3_dob_year}" %></td>
+	  	<td><%=h @signup.player3_address %></td>
+	  	<td><%=h @signup.player3_phone %></td>
+	  	<td><%=h @signup.player3_email %></td>
+	</tr>
+	<tr>
+  		<td><%=h @signup.player4_name %></td>
+	  	<td><%=h "#{@signup.player4_dob_month}/#{@signup.player4_dob_day}/#{@signup.player4_dob_year}" %></td>
+	  	<td><%=h @signup.player4_address %></td>
+	  	<td><%=h @signup.player4_phone %></td>
+	  	<td><%=h @signup.player4_email %></td>
+	</tr>
+</table>
 
 
 <%= link_to 'Edit', edit_signup_path(@signup) %> |
