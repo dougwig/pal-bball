@@ -1,0 +1,143 @@
+<h1>New signup</h1>
+
+<% form_for(@signup) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :team_sex %><br />
+    <%= f.text_field :team_sex %>
+  </p>
+  <p>
+    <%= f.label :coach_name %><br />
+    <%= f.text_field :coach_name %>
+  </p>
+  <p>
+    <%= f.label :coach_phone %><br />
+    <%= f.text_field :coach_phone %>
+  </p>
+  <p>
+    <%= f.label :coach_address %><br />
+    <%= f.text_field :coach_address %>
+  </p>
+  <p>
+    <%= f.label :coach_email %><br />
+    <%= f.text_field :coach_email %>
+  </p>
+  <p>
+    <%= f.label :player1_name %><br />
+    <%= f.text_field :player1_name %>
+  </p>
+  <p>
+    <%= f.label :player1_address %><br />
+    <%= f.text_field :player1_address %>
+  </p>
+  <p>
+    <%= f.label :player1_phone %><br />
+    <%= f.text_field :player1_phone %>
+  </p>
+  <p>
+    <%= f.label :player1_email %><br />
+    <%= f.text_field :player1_email %>
+  </p>
+  <p>
+    <%= f.label :player1_dob_month %><br />
+    <%= f.text_field :player1_dob_month %>
+  </p>
+  <p>
+    <%= f.label :player1_dob_day %><br />
+    <%= f.text_field :player1_dob_day %>
+  </p>
+  <p>
+    <%= f.label :player1_dob_year %><br />
+    <%= f.text_field :player1_dob_year %>
+  </p>
+  <p>
+    <%= f.label :player2_name %><br />
+    <%= f.text_field :player2_name %>
+  </p>
+  <p>
+    <%= f.label :player2_address %><br />
+    <%= f.text_field :player2_address %>
+  </p>
+  <p>
+    <%= f.label :player2_phone %><br />
+    <%= f.text_field :player2_phone %>
+  </p>
+  <p>
+    <%= f.label :player2_email %><br />
+    <%= f.text_field :player2_email %>
+  </p>
+  <p>
+    <%= f.label :player2_dob_month %><br />
+    <%= f.text_field :player2_dob_month %>
+  </p>
+  <p>
+    <%= f.label :player2_dob_day %><br />
+    <%= f.text_field :player2_dob_day %>
+  </p>
+  <p>
+    <%= f.label :player2_dob_year %><br />
+    <%= f.text_field :player2_dob_year %>
+  </p>
+  <p>
+    <%= f.label :player3_name %><br />
+    <%= f.text_field :player3_name %>
+  </p>
+  <p>
+    <%= f.label :player3_address %><br />
+    <%= f.text_field :player3_address %>
+  </p>
+  <p>
+    <%= f.label :player3_phone %><br />
+    <%= f.text_field :player3_phone %>
+  </p>
+  <p>
+    <%= f.label :player3_email %><br />
+    <%= f.text_field :player3_email %>
+  </p>
+  <p>
+    <%= f.label :player3_dob_month %><br />
+    <%= f.text_field :player3_dob_month %>
+  </p>
+  <p>
+    <%= f.label :player3_dob_day %><br />
+    <%= f.text_field :player3_dob_day %>
+  </p>
+  <p>
+    <%= f.label :player3_dob_year %><br />
+    <%= f.text_field :player3_dob_year %>
+  </p>
+  <p>
+    <%= f.label :player4_name %><br />
+    <%= f.text_field :player4_name %>
+  </p>
+  <p>
+    <%= f.label :player4_address %><br />
+    <%= f.text_field :player4_address %>
+  </p>
+  <p>
+    <%= f.label :player4_phone %><br />
+    <%= f.text_field :player4_phone %>
+  </p>
+  <p>
+    <%= f.label :player4_email %><br />
+    <%= f.text_field :player4_email %>
+  </p>
+  <p>
+    <%= f.label :player4_dob_month %><br />
+    <%= f.text_field :player4_dob_month %>
+  </p>
+  <p>
+    <%= f.label :player4_dob_day %><br />
+    <%= f.text_field :player4_dob_day %>
+  </p>
+  <p>
+    <%= f.label :player4_dob_year %><br />
+    <%= f.text_field :player4_dob_year %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', signups_path %>

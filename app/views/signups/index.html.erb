@@ -1,0 +1,84 @@
+<h1>Listing signups</h1>
+
+<table>
+  <tr>
+    <th>Team sex</th>
+    <th>Coach name</th>
+    <th>Coach phone</th>
+    <th>Coach address</th>
+    <th>Coach email</th>
+    <th>Player1 name</th>
+    <th>Player1 address</th>
+    <th>Player1 phone</th>
+    <th>Player1 email</th>
+    <th>Player1 dob month</th>
+    <th>Player1 dob day</th>
+    <th>Player1 dob year</th>
+    <th>Player2 name</th>
+    <th>Player2 address</th>
+    <th>Player2 phone</th>
+    <th>Player2 email</th>
+    <th>Player2 dob month</th>
+    <th>Player2 dob day</th>
+    <th>Player2 dob year</th>
+    <th>Player3 name</th>
+    <th>Player3 address</th>
+    <th>Player3 phone</th>
+    <th>Player3 email</th>
+    <th>Player3 dob month</th>
+    <th>Player3 dob day</th>
+    <th>Player3 dob year</th>
+    <th>Player4 name</th>
+    <th>Player4 address</th>
+    <th>Player4 phone</th>
+    <th>Player4 email</th>
+    <th>Player4 dob month</th>
+    <th>Player4 dob day</th>
+    <th>Player4 dob year</th>
+  </tr>
+
+<% @signups.each do |signup| %>
+  <tr>
+    <td><%=h signup.team_sex %></td>
+    <td><%=h signup.coach_name %></td>
+    <td><%=h signup.coach_phone %></td>
+    <td><%=h signup.coach_address %></td>
+    <td><%=h signup.coach_email %></td>
+    <td><%=h signup.player1_name %></td>
+    <td><%=h signup.player1_address %></td>
+    <td><%=h signup.player1_phone %></td>
+    <td><%=h signup.player1_email %></td>
+    <td><%=h signup.player1_dob_month %></td>
+    <td><%=h signup.player1_dob_day %></td>
+    <td><%=h signup.player1_dob_year %></td>
+    <td><%=h signup.player2_name %></td>
+    <td><%=h signup.player2_address %></td>
+    <td><%=h signup.player2_phone %></td>
+    <td><%=h signup.player2_email %></td>
+    <td><%=h signup.player2_dob_month %></td>
+    <td><%=h signup.player2_dob_day %></td>
+    <td><%=h signup.player2_dob_year %></td>
+    <td><%=h signup.player3_name %></td>
+    <td><%=h signup.player3_address %></td>
+    <td><%=h signup.player3_phone %></td>
+    <td><%=h signup.player3_email %></td>
+    <td><%=h signup.player3_dob_month %></td>
+    <td><%=h signup.player3_dob_day %></td>
+    <td><%=h signup.player3_dob_year %></td>
+    <td><%=h signup.player4_name %></td>
+    <td><%=h signup.player4_address %></td>
+    <td><%=h signup.player4_phone %></td>
+    <td><%=h signup.player4_email %></td>
+    <td><%=h signup.player4_dob_month %></td>
+    <td><%=h signup.player4_dob_day %></td>
+    <td><%=h signup.player4_dob_year %></td>
+    <td><%= link_to 'Show', signup %></td>
+    <td><%= link_to 'Edit', edit_signup_path(signup) %></td>
+    <td><%= link_to 'Destroy', signup, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New signup', new_signup_path %>
