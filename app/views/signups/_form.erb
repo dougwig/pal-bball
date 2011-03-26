@@ -1,12 +1,15 @@
 <%= form.error_messages %>
 
-<h2>Team</h2>
+<table class="signup"><tr>
+
+<td width=220px><h2>Team</h2>
 <p>
   <!-- <%= form.label "Team" %><br /> -->
   <%= form.select :team_sex, @signup.TEAM_SEXES %>
 </p>
+</td>
 
-<h2>Coach</h2>
+<td><h2>Coach</h2>
 <table>
 	<tr>
 		<td><%= form.label "Name" %></td>
@@ -25,6 +28,9 @@
 	  	<td><%= form.text_field :coach_address %></td>
 	</tr>
 </table>
+</td>
+
+</tr></table>
 
 <h2>Players</h2>
 <table>

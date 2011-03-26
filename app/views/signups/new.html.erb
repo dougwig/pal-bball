@@ -1,4 +1,23 @@
-<h1>New signup</h1>
+<% content_for :title, "3 on 3 BASKETBALL TEAM FORM" %>
+
+<p class="greybox">The purpose of this form is to request that players in the same age group be placed on the same team.<br />
+<strong>In order to complete a team, ALL players must provide proof of paid registration<br />
+(Last page of the Certificate of Registration) and attach those copies to this form.<br /></strong>
+</p>
+
+<ul>
+	<li>ALL players MUST register online or at MPAL office (having the players’ names on this Team form does NOT register players). Players must register and identify their age, grade, level of competition, and playing experience.</li>
+	<li>Age cut-off date is August 31, 2011 – the age the player as of this date. This is the age group they will be assigned to at registration time. A PLAY-UP form is required if the player wishes to play up one (1) age group (located on basketball page of MPAL website) and must be submitted to MPAL within 7 days of registering.</li>
+	<li><strong>All coaches MUST register online by completing the ADULT PARTICIPATION REGISTRATION FORM. <u>Coaches are not required for teams in 5th grade and above.</u></strong></li>
+</ul>
+
+<h3>Team Registration guidelines are as follows: </h3>
+<ol>
+<li>Maximum of four (4) players per team. Teams and this form must have at least 3 players.</li>
+<li>Please submit only one (1) Team form per team and complete all sections with parent signatures. </li>
+<li>Team Form must be received by <u>MPAL by 6:00 PM on THURSDAY, APRIL 28th, 2011.</u> Forms received after 	this date may not be honored.</li> 
+<li>If a player is in a different age group than the others, it is the parents’ responsibility to attach a play-up form 	(located on the MPAL website under Basketball) with the buddy form. Forms will not be honored with 	players in different age groups without a signed play-up form for the younger players. </li>
+</ol>
 
 <% form_for(@signup) do |f| %>
 	<%= render :partial => "form", :object => f %>

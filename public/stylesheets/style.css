@@ -1,0 +1,152 @@
+/*
+Colors
+Blue: 4169E1
+Blue Grey: 4F65A9
+Dark Blue: 153592
+Med Blue: 7090F0
+Light Blue: 92AAF0
+*/
+
+html, body {
+	font-size: 100%;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #000;
+
+}
+
+.header {
+	height: 150px;
+}
+
+.header table {
+	width: 100%;
+	text-align: center;
+}
+
+.container {
+	margin: 20px 50px 20px 50px;
+	padding: 0;
+}
+
+table.signup {
+	width: 100%;
+}
+.signup td {
+	vertical-align: top;
+}
+
+.greybox {
+	width: 100%;
+	background-color: #c0c0c0;
+	border: 1px solid black;
+	text-align: center;
+	padding: 7px;
+}
+
+.notice, .alert, .errorExplanation {
+	width: 100%;
+	background-color: #ffcccc;
+	border: 1px solid red;
+	padding: 7px;	
+}
+
+li {
+	margin-bottom: 5px;
+}
+
+.aligncenter {
+	float: center;
+}
+
+.alignleft {
+	float: left;
+}
+
+.alignright {
+	float: right;
+}
+
+a {
+	text-decoration: none;
+	color: #4169e1;
+}
+
+a:hover {
+	color: #74a5fd;
+}
+
+.nav {
+	text-align: right;
+	height: 50px;
+	font-size: 0.9em;
+}
+
+.nav ul {
+	list-style: none;
+}
+
+#flash {
+	margin: auto;
+	text-align: center;
+	margin-bottom: 20px;
+	color: #4169E1;
+}
+
+.form_container {
+	text-align: center;
+}
+
+form {
+	margin-bottom: 20px;
+	text-align: left;
+}
+
+fieldset#login {
+    margin-top: 300px;
+	width: 216px;
+	margin: auto;
+	
+	border: 1px solid #bbb;
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	
+	-moz-box-shadow: 5px 5px 5px #bbb;
+	-webkit-box-shadow: 5px 5px 5px #bbb;
+	-o-box-shadow: 5px 5px 5px #bbb;
+	box-shadow: 5px 5px 5px #bbb;
+	
+	background-image: -moz-linear-gradient(
+		top, #fff, #efefef
+	);
+	background-image: -webkit-gradient(
+		linear,left top, left bottom,
+		color-stop(0, #fff),
+		color-stop(1, #efefef)
+	);
+	background-image: linear-gradient(
+		top, #fff, #efefef
+	);
+}
+
+fieldset#login>h2{
+	font-size: 1.2em;
+	text-align: center;
+	color: #4f65a9;
+}
+
+strong#err_msg {
+	font-size: 0.8em;
+	color: red;
+}
+
+fieldset#login>ul{
+	list-style: none;
+	padding:0;
+	margin: 2px;
+}
+
+fieldset#login>ul>li{
+	margin: 0 0 9px 0;
+	padding: 0;
+}

@@ -4,14 +4,35 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-  <title>Signups: <%= controller.action_name %></title>
-  <%= stylesheet_link_tag 'scaffold' %>
+  <title><%=h yield(:title) %></title>
+  <%= stylesheet_link_tag 'style' %>
 </head>
 <body>
+<div class="container">
 
-<p style="color: green"><%= flash[:notice] %></p>
+<div class="header">
+<table><tr>
+<td width=30%><%= image_tag("basketball.jpg") %></td>
+<td><%= image_tag("MPALlogo_small.jpg") %></td>
+<td width=30%><h1><%=h yield(:title) %></h1></td>
+</tr></table>
+</div>
+
+<div class="content">
+<% if flash[:notice] %>
+  <div class="notice" id="flash">
+    <%= flash[:notice] %>
+  </div>
+<% end %>
+<% if flash[:alert] %>
+  <div class="alert" id="flash">
+    <%= flash[:alert] %>
+  </div>
+<% end %>
 
 <%= yield %>
+</div>
 
+</div>
 </body>
 </html>
