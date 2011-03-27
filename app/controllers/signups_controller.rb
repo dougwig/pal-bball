@@ -1,4 +1,8 @@
 class SignupsController < ApplicationController
+  before_filter :require_magic_key, :except => [ :show, :new, :create ]
+  before_filter :require_magic_key_or_auth_token, :only => [ :show ]
+  before_filter :require_noauth, :only => [ :new, :create ]
+
   # GET /signups
   # GET /signups.xml
   def index
@@ -45,7 +49,7 @@ class SignupsController < ApplicationController
     respond_to do |format|
       if @signup.save
         flash[:notice] = 'Signup was successfully created.'
-        format.html { redirect_to(@signup) }
+        format.html { redirect_to("/signups/#{@signup.id}?auth_token=#{@signup.auth_token}") }
         format.xml  { render :xml => @signup, :status => :created, :location => @signup }
       else
         format.html { render :action => "new" }
@@ -82,4 +86,7 @@ class SignupsController < ApplicationController
       format.xml  { head :ok }
     end
   end
+  
+private
+  
 end

@@ -1,4 +1,6 @@
 class Signup < ActiveRecord::Base
+  before_save :generate_auth_token
+
   validates_presence_of :team_sex
   validates_presence_of :coach_name, :coach_email, :coach_phone
   validates_presence_of :player1_name, :player1_dob_month, :player1_dob_day, :player1_dob_year
@@ -19,4 +21,10 @@ class Signup < ActiveRecord::Base
     [nil] + (Time.now.year-20..Time.now.year).to_a
   end
   
+private
+  def generate_auth_token
+    if (self.auth_token.blank?)
+      self.auth_token = ::ActiveSupport::SecureRandom.base64(15).tr('+/=', '-_ ').strip.delete("\n")
+    end
+  end
 end

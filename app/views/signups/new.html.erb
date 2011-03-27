@@ -26,4 +26,6 @@
   	</p>
 <% end %>
 
-<%= link_to 'Back', signups_path %>
+<% if @auth_global %>
+	<%= link_to 'Back', signups_path %>
+<% end %>

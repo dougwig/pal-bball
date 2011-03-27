@@ -93,6 +93,7 @@ Address Line 3
 	<% end %>
 </table>
 
-
-<%= link_to 'Edit', edit_signup_path(@signup) %> |
-<%= link_to 'Back', signups_path %>
+<% if @auth_global %>
+	<%= link_to 'Edit', edit_signup_path(@signup) %> |
+	<%= link_to 'Back', signups_path %>
+<% end %>
