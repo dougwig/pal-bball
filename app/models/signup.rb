@@ -10,6 +10,9 @@ class Signup < ActiveRecord::Base
   def TEAM_SEXES
     [ "Boys", "Girls" ]
   end
+  def TEAM_LEVELS
+    [ "Recreational", "Competitive" ]
+  end
   
   def DOB_MONTHS
     [nil] + (1..12).to_a
