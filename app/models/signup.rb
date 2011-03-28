@@ -23,10 +23,38 @@ class Signup < ActiveRecord::Base
     [nil] + (Time.now.year-20..Time.now.year).to_a
   end
   
+  def price
+    price = 0
+    price += price_per_kid(player1_dob_month, player1_dob_day, player1_dob_year)
+    price += price_per_kid(player2_dob_month, player2_dob_day, player2_dob_year)
+    price += price_per_kid(player3_dob_month, player3_dob_day, player3_dob_year)
+    unless (player4_name.blank?)
+      price += price_per_kid(player4_dob_month, player4_dob_day, player4_dob_year)
+    end
+    price
+  end
+  
 private
   def generate_auth_token
     if (self.auth_token.blank?)
       self.auth_token = ::ActiveSupport::SecureRandom.base64(15).tr('+/=', '-_ ').strip.delete("\n")
+    end
+  end
+
+  def age(datestr)
+    birthday = Date.parse(datestr)
+    today = Date.today
+    age = today.year - birthday.year
+    age -= 1 if today < birthday + age.years #for days before birthday
+    logger.info "AGE datestr=#{datestr}, age=#{age}"
+    age
+  end
+  def price_per_kid(mon, day, year)
+    a = age("#{mon}/#{day}/#{year}")
+    if (a <= 8)
+      65
+    else
+      70
     end
   end
 end

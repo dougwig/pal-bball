@@ -29,19 +29,15 @@
 </td>
 
 <td width=200px><h2>Paypal</h2>
-	<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
-	<input type="hidden" name="cmd" value="_s-xclick">
-	<input type="hidden" name="hosted_button_id" value="PB4JRJX5KEG7L">
-	<table>
-	<tr><td><input type="hidden" name="on0" value="Registration Fees">Registration Fees</td></tr><tr><td><select name="os0">
-	<option value="Ages 5-8">Ages 5-8 $65.00</option>
-	<option value="Ages 9-18">Ages 9-18 $70.00</option>
-	</select> </td></tr>
-	</table>
+	Total: $<%= @signup.price %><br/>
+	<form name="_xclick" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+	<input type="hidden" name="cmd" value="_xclick">
+	<input type="hidden" name="business" value="paypal@meridianpal.org">
 	<input type="hidden" name="currency_code" value="USD">
-	<input type="image" src="https://www.paypalobjects.com/WEBSCR-640-20110306-1/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-	<img alt="" border="0" src="https://www.paypalobjects.com/WEBSCR-640-20110306-1/en_US/i/scr/pixel.gif" width="1" height="1">
-	</form>	
+	<input type="hidden" name="item_name" value="3 on 3 Basketball Tournament">
+	<input type="hidden" name="amount" value="<%= @signup.price -%>">
+	<input type="image" src="http://www.paypal.com/en_US/i/btn/btn_buynow_LG.gif" border="0" name="submit" alt="Make payments with PayPal - it's fast, free and secure!">
+	</form>
 </td>
 
 <td width=300px>
