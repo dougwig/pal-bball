@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110327210124) do
+ActiveRecord::Schema.define(:version => 20110405003956) do
 
   create_table "signups", :force => true do |t|
     t.string   "team_sex"
@@ -49,6 +49,7 @@ ActiveRecord::Schema.define(:version => 20110327210124) do
     t.datetime "updated_at"
     t.string   "auth_token"
     t.string   "team_level"
+    t.string   "preferred_school"
   end
 
 end

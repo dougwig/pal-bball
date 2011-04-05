@@ -23,6 +23,17 @@ class Signup < ActiveRecord::Base
     [nil] + (Time.now.year-20..Time.now.year).to_a
   end
   
+  def SCHOOLS
+    [ "Eagle",
+      "Heritage",
+      "Kuna",
+      "Lake Hazel",
+      "Lewis & Clark",
+      "Lowell Scott",
+      "Meridian",
+      "Sawtooth" ]
+  end
+  
   def price
     price = 0
     price += price_per_kid(player1_dob_month, player1_dob_day, player1_dob_year)

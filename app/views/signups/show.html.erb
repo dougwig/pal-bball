@@ -7,6 +7,13 @@
 <%=h @signup.team_level %>
 </td>
 
+<% unless @signup.preferred_school.blank? %>
+	<td width=220px><h2>School</h2>
+	<%=h @signup.preferred_school %><br />
+	</td>
+<% end %>
+
+
 <td><h2>Coach</h2>
 <table>
 	<tr>
