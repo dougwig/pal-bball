@@ -29,7 +29,10 @@ class Signup < ActiveRecord::Base
       "YL (Youth Large)", 
       "YXL (Youth X-Large)", 
       "AS (Adult Small)", 
-      "AM (Adult Medium)" ]
+      "AM (Adult Medium)",
+      "AL (Adult Large)",
+      "AXL (Adult X-Large)",
+      "AXXL (Adult XX-Large)" ]
   end
   
   def SCHOOLS
