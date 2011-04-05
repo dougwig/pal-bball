@@ -2,9 +2,9 @@ class Signup < ActiveRecord::Base
   before_save :generate_auth_token
 
   validates_presence_of :team_sex
-  validates_presence_of :player1_name, :player1_dob_month, :player1_dob_day, :player1_dob_year
-  validates_presence_of :player2_name, :player2_dob_month, :player2_dob_day, :player2_dob_year
-  validates_presence_of :player3_name, :player3_dob_month, :player3_dob_day, :player3_dob_year
+  validates_presence_of :player1_name, :player1_dob_month, :player1_dob_day, :player1_dob_year, :player1_tshirt_size
+  validates_presence_of :player2_name, :player2_dob_month, :player2_dob_day, :player2_dob_year, :player2_tshirt_size
+  validates_presence_of :player3_name, :player3_dob_month, :player3_dob_day, :player3_dob_year, :player3_tshirt_size
   
   def TEAM_SEXES
     [ "Boys", "Girls" ]
@@ -21,6 +21,15 @@ class Signup < ActiveRecord::Base
   end
   def DOB_YEARS
     [nil] + (Time.now.year-20..Time.now.year).to_a
+  end
+  
+  def TSHIRT_SIZES
+    [ "YS (Youth Small)", 
+      "YM (Youth Medium)", 
+      "YL (Youth Large)", 
+      "YXL (Youth X-Large)", 
+      "AS (Adult Small)", 
+      "AM (Adult Medium)" ]
   end
   
   def SCHOOLS

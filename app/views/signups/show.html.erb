@@ -65,6 +65,7 @@ Memo: PAL Basketball Invoice: <%= @signup.id -%>
 		<th>Phone</th>
 		<th>Email</th>
 		<th>Address</th>
+		<th>Shirt size</th>
 	</tr>
 	<tr>
   		<td><%=h @signup.player1_name %></td>
@@ -72,6 +73,7 @@ Memo: PAL Basketball Invoice: <%= @signup.id -%>
 	  	<td><%=h @signup.player1_address %></td>
 	  	<td><%=h @signup.player1_phone %></td>
 	  	<td><%=h @signup.player1_email %></td>
+		<td><%=h @signup.player1_tshirt_size %></td>
 	</tr>
 	<tr>
   		<td><%=h @signup.player2_name %></td>
@@ -79,6 +81,7 @@ Memo: PAL Basketball Invoice: <%= @signup.id -%>
 	  	<td><%=h @signup.player2_address %></td>
 	  	<td><%=h @signup.player2_phone %></td>
 	  	<td><%=h @signup.player2_email %></td>
+		<td><%=h @signup.player2_tshirt_size %></td>
 	</tr>
 	<tr>
   		<td><%=h @signup.player3_name %></td>
@@ -86,6 +89,7 @@ Memo: PAL Basketball Invoice: <%= @signup.id -%>
 	  	<td><%=h @signup.player3_address %></td>
 	  	<td><%=h @signup.player3_phone %></td>
 	  	<td><%=h @signup.player3_email %></td>
+		<td><%=h @signup.player3_tshirt_size %></td>
 	</tr>
 	<% if !@signup.player4_name.empty? %>
 	<tr>
@@ -94,6 +98,7 @@ Memo: PAL Basketball Invoice: <%= @signup.id -%>
 	  	<td><%=h @signup.player4_address %></td>
 	  	<td><%=h @signup.player4_phone %></td>
 	  	<td><%=h @signup.player4_email %></td>
+		<td><%=h @signup.player4_tshirt_size %></td>
 	</tr>
 	<% end %>
 </table>

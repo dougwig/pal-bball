@@ -53,6 +53,7 @@ As the participant/parent/guardian I assume all risks and hazards incidental to 
 		<th>Phone</th>
 		<th>Email</th>
 		<th>Address</th>
+		<th>Shirt size</th>
 	</tr>
 	<tr>
 		<td><%= form.text_field :player1_name %></td>
@@ -62,6 +63,7 @@ As the participant/parent/guardian I assume all risks and hazards incidental to 
 	  	<td><%= form.text_field :player1_phone %></td>
 	  	<td><%= form.text_field :player1_email %></td>
 	  	<td><%= form.text_field :player1_address %></td>
+	  	<td><%= form.select :player1_tshirt_size, @signup.TSHIRT_SIZES, :include_blank => true, :title => 'Select a Size'  %></td>
 	</tr>
 	<tr>
 		<td><%= form.text_field :player2_name %></td>
@@ -71,6 +73,7 @@ As the participant/parent/guardian I assume all risks and hazards incidental to 
 	  	<td><%= form.text_field :player2_phone %></td>
 	  	<td><%= form.text_field :player2_email %></td>
 	  	<td><%= form.text_field :player2_address %></td>
+	  	<td><%= form.select :player2_tshirt_size, @signup.TSHIRT_SIZES, :include_blank => true, :title => 'Select a Size'  %></td>
 	</tr>
 	<tr>
 		<td><%= form.text_field :player3_name %></td>
@@ -80,6 +83,7 @@ As the participant/parent/guardian I assume all risks and hazards incidental to 
 	  	<td><%= form.text_field :player3_phone %></td>
 	  	<td><%= form.text_field :player3_email %></td>
 	  	<td><%= form.text_field :player3_address %></td>
+	  	<td><%= form.select :player3_tshirt_size, @signup.TSHIRT_SIZES, :include_blank => true, :title => 'Select a Size'  %></td>
 	</tr>
 	<tr>
 		<td><%= form.text_field :player4_name %></td>
@@ -89,5 +93,6 @@ As the participant/parent/guardian I assume all risks and hazards incidental to 
 	  	<td><%= form.text_field :player4_phone %></td>
 	  	<td><%= form.text_field :player4_email %></td>
 	  	<td><%= form.text_field :player4_address %></td>
+	  	<td><%= form.select :player4_tshirt_size, @signup.TSHIRT_SIZES, :include_blank => true, :title => 'Select a Size'  %></td>
 	</tr>
 </table>
