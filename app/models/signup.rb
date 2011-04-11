@@ -47,8 +47,12 @@ class Signup < ActiveRecord::Base
   def price
     price = 0
     price += price_per_kid(player1_dob_month, player1_dob_day, player1_dob_year)
-    price += price_per_kid(player2_dob_month, player2_dob_day, player2_dob_year)
-    price += price_per_kid(player3_dob_month, player3_dob_day, player3_dob_year)
+    unless (player4_name.blank?)
+      price += price_per_kid(player2_dob_month, player2_dob_day, player2_dob_year)
+    end
+    unless (player4_name.blank?)
+      price += price_per_kid(player3_dob_month, player3_dob_day, player3_dob_year)
+    end
     unless (player4_name.blank?)
       price += price_per_kid(player4_dob_month, player4_dob_day, player4_dob_year)
     end
