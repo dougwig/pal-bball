@@ -3,8 +3,6 @@ class Signup < ActiveRecord::Base
 
   validates_presence_of :team_sex
   validates_presence_of :player1_name, :player1_dob_month, :player1_dob_day, :player1_dob_year, :player1_tshirt_size
-  validates_presence_of :player2_name, :player2_dob_month, :player2_dob_day, :player2_dob_year, :player2_tshirt_size
-  validates_presence_of :player3_name, :player3_dob_month, :player3_dob_day, :player3_dob_year, :player3_tshirt_size
   
   def TEAM_SEXES
     [ "Boys", "Girls" ]
