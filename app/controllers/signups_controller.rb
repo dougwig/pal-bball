@@ -1,3 +1,5 @@
+require "CSV"
+
 class SignupsController < ApplicationController
   before_filter :require_magic_key, :except => [ :show, :new, :create ]
   before_filter :require_magic_key_or_auth_token, :only => [ :show ]
@@ -10,7 +12,29 @@ class SignupsController < ApplicationController
 
     respond_to do |format|
       format.html # index.html.erb
-      format.xml  { render :xml => @signups }
+      format.xml { render :xml => @signups }
+      format.csv do
+        fields = Signup.new.attributes.keys.sort - ["auth_token"]
+        csv_string = StringIO.new
+        CSV::Writer.generate(csv_string, ',') do |csv|
+          csv << fields
+          @signups.each do |signup|
+            z = []
+            fields.each do |attr|
+              val = eval "signup.#{attr}"
+              z << val
+            end
+            csv << z
+          end
+        end
+        #csv_string.rewind
+        #logger.info "CSV string = #{csv_string.read}"
+
+        csv_string.rewind
+        send_data csv_string.read,
+            :type => 'text/csv; charset=iso-8859-1; header=present',
+            :disposition => "attachment; filename=signups.csv"
+      end
     end
   end
 
