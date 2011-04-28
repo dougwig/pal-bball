@@ -67,16 +67,22 @@ private
   end
 
   def age(datestr)
-    birthday = Date.parse(datestr)
-    today = Date.today
-    age = today.year - birthday.year
-    age -= 1 if today < birthday + age.years #for days before birthday
-    logger.info "AGE datestr=#{datestr}, age=#{age}"
-    age
+    begin
+      birthday = Date.parse(datestr)
+      today = Date.today
+      age = today.year - birthday.year
+      age -= 1 if today < birthday + age.years #for days before birthday
+      logger.info "AGE datestr=#{datestr}, age=#{age}"
+      age
+    rescue
+      0
+    end
   end
   def price_per_kid(mon, day, year)
     a = age("#{mon}/#{day}/#{year}")
-    if (a <= 8)
+    if (a == 0)
+      70
+    elsif (a <= 8)
       65
     else
       70
