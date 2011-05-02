@@ -1,0 +1,36 @@
+<% content_for :title, "3 on 3 Basketball Registration" %>
+
+<p class="greybox"><br />
+<strong>You can sign up as an individual and be placed on a team by MPAL, or sign up as a complete team.<br />
+Individual players will be placed on a team closest to the Middle School you select below.<br />
+Cost per player is $65 for players ages 5-8 (cutoff date for birthday is August 31, 2011), and $70 for players ages 9-18.<br />
+Must be 5 years old by August 31, 2011, and cannot turn 19 by August 31, 2011</strong>
+</p>
+
+<ul>
+	<li>ALL players must register online. Players must register and identify their age, grade, level of competition, and playing experience.</li>
+	<li>A PLAY-UP form is required if the player wishes to play up one (1) age group (located on basketball page at www.meridianpal.org) and must be submitted to MPAL within 7 days of registering.</li>
+	<li><strong>All coaches MUST register online by completing the Adult Participation Registration Form.</strong><br />
+	  Please go to <a href=https://www.youthleaguesusa.com/meridian/2011/Volunteer.html><u>Youth Leagues USA</u></a> to sign up to be a coach.
+	<u><b>Coaches are not required for teams in 5th grade and above.</b></u>
+	</li>
+</ul>
+
+<h3>Team Registration guidelines are as follows: </h3>
+<ol>
+<li>Maximum of four (4) players per team, with a minimum of 3 players </li>
+<li>Please submit only one (1) Team form per team and complete all sections, unless signing up as an individual. </li>
+<li>Team Form must be submitted and paid by <u>6:00 PM on THURSDAY, APRIL 28th, 2011.</u> Forms received after this date may not be honored.</li> 
+<li>If a player is in a different age group than the others, it is the parents’ responsibility to attach a play-up form 	(located on the MPAL website under Basketball) with the buddy form. Forms will not be honored with players in different age groups without a signed play-up form for the younger players. </li>
+</ol>
+
+<% form_for(@signup) do |f| %>
+	<%= render :partial => "form", :object => f %>
+  	<p>
+    	<%= f.submit 'Create' %>
+  	</p>
+<% end %>
+
+<% if @auth_global %>
+	<%= link_to 'Back', signups_path %>
+<% end %>
